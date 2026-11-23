@@ -1,0 +1,6 @@
+activity_date,segment,region,transaction_count,amount_cents
+2026-01-02,business,CA,1,35000
+2026-01-02,retail,IL,2,17500
+2026-01-02,retail,NY,1,20000
+2026-01-04,business,IL,1,10000
+2026-01-04,retail,TX,1,15000

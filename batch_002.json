@@ -1,0 +1,111 @@
+{
+  "batch_id": "002-changes",
+  "customers": [
+    {
+      "event_id": "ce4",
+      "customer_id": "c1",
+      "version": 2,
+      "segment": "business",
+      "region": "IL",
+      "operation": "upsert",
+      "effective_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "event_id": "ce5",
+      "customer_id": "c2",
+      "version": 2,
+      "segment": "retail",
+      "region": "TX",
+      "operation": "upsert",
+      "effective_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "event_id": "ce6",
+      "customer_id": "c3",
+      "version": 2,
+      "segment": "business",
+      "region": "CA",
+      "operation": "delete",
+      "effective_at": "2026-01-03T00:00:00Z"
+    },
+    {
+      "event_id": "ce1",
+      "customer_id": "c1",
+      "version": 1,
+      "segment": "retail",
+      "region": "IL",
+      "operation": "upsert",
+      "effective_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "event_id": "ce7",
+      "customer_id": "c1",
+      "version": 1,
+      "segment": "retail",
+      "region": "IL",
+      "operation": "upsert",
+      "effective_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "event_id": "ce8",
+      "customer_id": "c4",
+      "version": 0,
+      "segment": "retail",
+      "region": "TX",
+      "operation": "upsert",
+      "effective_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "event_id": "ce5",
+      "customer_id": "c2",
+      "version": 2,
+      "segment": "retail",
+      "region": "CA",
+      "operation": "upsert",
+      "effective_at": "2026-01-03T00:00:00Z"
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "t4",
+      "customer_id": "c1",
+      "amount_cents": 10000,
+      "occurred_at": "2026-01-04T12:00:00Z"
+    },
+    {
+      "transaction_id": "t5",
+      "customer_id": "c2",
+      "amount_cents": 15000,
+      "occurred_at": "2026-01-04T12:00:00Z"
+    },
+    {
+      "transaction_id": "t6",
+      "customer_id": "c3",
+      "amount_cents": 1000,
+      "occurred_at": "2026-01-04T12:00:00Z"
+    },
+    {
+      "transaction_id": "t1",
+      "customer_id": "c1",
+      "amount_cents": 12500,
+      "occurred_at": "2026-01-02T12:00:00Z"
+    },
+    {
+      "transaction_id": "t2",
+      "customer_id": "c2",
+      "amount_cents": 20001,
+      "occurred_at": "2026-01-02T12:00:00Z"
+    },
+    {
+      "transaction_id": "t7",
+      "customer_id": "c1",
+      "amount_cents": 5000,
+      "occurred_at": "2026-01-02T12:00:00Z"
+    }
+  ],
+  "controls": {
+    "new_transactions": 3,
+    "new_amount_cents": 30000,
+    "rejected_rows": 4
+  }
+}

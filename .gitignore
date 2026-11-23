@@ -1,0 +1,6 @@
+__pycache__/
+*.duckdb*
+*.sqlite*
+.venv/
+runs/
+demo-output/

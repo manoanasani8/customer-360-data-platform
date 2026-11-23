@@ -1,0 +1,50 @@
+{
+  "batches": [
+    {
+      "batch_id": "001-bootstrap",
+      "status": "loaded",
+      "decisions": {
+        "customers.applied": 3,
+        "transactions.applied": 3
+      },
+      "controls": {
+        "new_transactions": 3,
+        "new_amount_cents": 67500,
+        "rejected_rows": 0
+      }
+    },
+    {
+      "batch_id": "002-changes",
+      "status": "loaded",
+      "decisions": {
+        "customers.applied": 2,
+        "customers.deleted": 1,
+        "customers.duplicate": 1,
+        "customers.stale": 1,
+        "customers.invalid_customer": 1,
+        "customers.event_id_conflict": 1,
+        "transactions.applied": 3,
+        "transactions.no_active_customer_at_event_time": 1,
+        "transactions.duplicate": 1,
+        "transactions.transaction_id_conflict": 1
+      },
+      "controls": {
+        "new_transactions": 3,
+        "new_amount_cents": 30000,
+        "rejected_rows": 4
+      }
+    }
+  ],
+  "replay": {
+    "batch_id": "002-changes",
+    "status": "already_loaded"
+  },
+  "blocked_batch": "quality_control_mismatch",
+  "metrics": {
+    "Active customers": 2,
+    "Customer versions": 6,
+    "Transactions": 6,
+    "Volume USD": "975.00",
+    "Exceptions": 4
+  }
+}
