@@ -9,8 +9,8 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
@@ -19,7 +19,11 @@ jobs:
         run: python -m unittest -v
       - name: Reproduce complete demo
         run: python demo.py
-      - uses: actions/upload-artifact@v4
+      - name: Build Docker image
+        run: docker build -t customer-360 .
+      - name: Run containerized demo
+        run: docker run --rm customer-360
+      - uses: actions/upload-artifact@v7
         with:
           name: customer-360-demo-results
           path: demo-output/
